@@ -1,0 +1,103 @@
+.page_center{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.page_left{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+.page_right{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+.index_page{
+    position: relative;
+    text-align: center;
+    background-color: #4bc4a6;
+	font-family: 'Arvo', serif;
+	font-size: 4vw;
+}
+
+.index_title_container{
+	margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    width: 60%;
+    color: white;
+}
+
+.menu_page{
+    position: relative;
+    text-align: center;
+    background-color: #eff1e4;
+    color: #f9e16e;
+	font-family: 'Roboto', sans-serif;
+	font-size: 4vw;
+}
+
+.menu_container{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.menu_flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.menu_artists{
+    background-color: #f46f4c;
+    color: #905298;
+    flex: 1;
+    cursor: pointer;
+}
+
+.menu_works{
+    background-color: #b24696;
+    color: #e05838;
+    flex: 1;
+    cursor: pointer;
+}
+
+.artists_page{
+    background-image: url(../images/artistas.png);
+    position: relative;
+    text-align: center;
+    color: #4b2c2c;
+	font-family: 'Roboto', sans-serif;
+	font-size: 4vw;
+}
+
+.artists_back{
+    position: fixed;
+    cursor: pointer;
+    bottom: 2%;
+    right: 2%;
+}
+
+.works_page{
+    background-image: url(../images/galeria.png);
+    position: relative;
+    text-align: center;
+    color: #4b2c2c;
+	font-family: 'Roboto', sans-serif;
+	font-size: 4vw;
+}
+
+.works_back{
+    position: fixed;
+    cursor: pointer;
+    bottom: 2%;
+    left: 2%;
+}
