@@ -95,6 +95,21 @@
 	font-size: 4vw;
 }
 
+.works_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.works_child{
+    flex: auto;
+    align-items: center;
+}
+
+.works_child img{
+    padding: 2%;
+}
+
 .works_back{
     position: fixed;
     cursor: pointer;
