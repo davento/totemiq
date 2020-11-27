@@ -1,0 +1,16 @@
+CREATE SCHEMA totemiq;
+SET search_path = "$user", totemiq;
+
+CREATE TABLE totemiq.user(
+	user_id SERIAL ,
+	username varchar(20) NOT NULL,
+	email text NOT NULL,
+	user_pass varchar(8) NOT NULL,
+	PRIMARY KEY(user_id)
+);
+
+CREATE TABLE totemiq.art (
+	art_id varchar(6),
+	art_info text,
+	PRIMARY KEY(art_id)
+);
