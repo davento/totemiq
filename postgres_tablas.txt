@@ -2,7 +2,9 @@ CREATE SCHEMA totemiq;
 SET search_path = "$user", totemiq;
 
 CREATE TABLE totemiq.user(
-	user_id SERIAL ,
+	user_id SERIAL,
+	born_in varchar(30)
+	bio text NOT NULL,
 	username varchar(20) NOT NULL,
 	email text NOT NULL,
 	user_pass varchar(8) NOT NULL,
