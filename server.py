@@ -18,6 +18,10 @@ def info():
 def works():
     return render_template("works.html")
 
+@app.route("/works/<id>")
+def worksId(id):
+    return render_template("works/" + id + ".html")
+
 if __name__ == '__main__':
     app.secret_key = ".."
     app.run(port=8080, threaded=True, host=('127.0.0.1'))

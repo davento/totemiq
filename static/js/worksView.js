@@ -1,16 +1,33 @@
-// $(function(){
-//     var folder = "static/assets";
-//     var divclass = "works_child";
+// function loadSlideshow(){
+//     var folder = "..static/images/works/";
+//     var divclass = "works_img fade";
 
 //     $.ajax({
-//         url : folder,
+//         url: folder,
 //         success: function (data) {
 //             $(data).find("a").attr("href", function (i, val) {
-//                 if( val.match(/\.(png)$/) ) {
-//                     $("slideshow_container").append( "<div class='"+ divclass +"' id='"+ i +"'><img src='"+ folder + val +"'></div>" );
+//                 if (val.match(/\.(jpe?g|png|gif)$/)) {
+//                     $("slideshow_container").append("<img class='work_img fade' img src='" + folder + val + "'>");
 //                 }
 //             });
 //         }
 //     });
 // }
-// )
+
+
+
+// function loadSlideshow() {
+//     var dir = "static/images/obras/";
+//     var fileextension = ".png";
+//     $.ajax({
+//         //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+//         url: dir,
+//         success: function (data) {
+//             //List all .png file names in the page
+//             $(data).find("a:contains(" + fileextension + ")").each(function () {
+//                 var filename = this.href.replace(window.location.host, "").replace("http://", "");
+//                 $("slideshow_container").append("<img class='works_img fade' src='" + dir + filename + "'>");
+//             });
+//         }
+//     });
+// }

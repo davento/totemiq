@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
     <link rel="stylesheet" href="../static/css/format.css">
     <link rel="stylesheet" href="../static/css/slideshow.css">
-    <script src="../static/js/function.js"></script>
-    <script src="../static/js/worksView.js"></script>
+    <script type="text/javascript" src="../static/js/function.js"></script>
     <title>Obras</title>
 </head>
 
 <body class="works_page">
     <h1>OBRAS</h1>
     <div id="slideshow_container">
-        <img class="works_img fade" src="../static/images/001.png" />
-        <img class="works_img fade" src="../static/images/002.png" />
-        <img class="works_img fade" src="../static/images/003.png" />
+        <img class="works_img fade" src="../static/images/works/001.png" onclick="redirectObra(1)"/>
+        <img class="works_img fade" src="../static/images/works/002.png" onclick="redirectObra(2)"/>
+        <img class="works_img fade" src="../static/images/works/003.png" onclick="redirectObra(3)"/>
         <button class="btn" id="left" onclick="plusIndex(-1)">&#10094;</button>
         <button class="btn" id="right" onclick="plusIndex(1)">&#10095;</button>
     </div>
@@ -27,7 +26,8 @@
 </html>
 
 
-<script>
+<script type="text/javascript">
+
     var index = 1;
 
     function plusIndex(n) {
@@ -37,7 +37,8 @@
 
     showImage(1);
 
-    function showImage(n) {
+    function showImage(n)
+    {
         var i;
         var x = document.getElementsByClassName("works_img");
         if (n > x.length) { index = 1 };
@@ -49,7 +50,8 @@
     }
 
     autoSlide();
-    function autoSlide() {
+    function autoSlide()
+    {
         var i;
         var x = document.getElementsByClassName("works_img");
         for (i = 0; i < x.length; i++) {
