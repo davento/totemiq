@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="image/ico" href="../static/images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" href="static/css/format.css">
-    <script src="../static/js/function.js"></script>
+    <link rel="stylesheet" href="../static/css/format.css">
+    <link rel="stylesheet" href="../static/css/slideshow.css">
+    <script type="text/javascript" src="../static/js/function.js"></script>
     <title>Obras</title>
 </head>
 
 <body class="works_page">
     <h1>OBRAS</h1>
-    <div class="works_container" id="worksContainer"></div>
+    <div id="slideshow_container">
+        <img class="works_img fade" src="../static/images/works/001.png" onclick="redirectObra(1)"/>
+        <img class="works_img fade" src="../static/images/works/002.png" onclick="redirectObra(2)"/>
+        <img class="works_img fade" src="../static/images/works/003.png" onclick="redirectObra(3)"/>
+        <button class="btn" id="left" onclick="plusIndex(-1)">&#10094;</button>
+        <button class="btn" id="right" onclick="plusIndex(1)">&#10095;</button>
+    </div>
     <div class="works_back" onclick="redirectMenu()"><img src="../static/images/arrow-left.png"></div>
 </body>
 
 </html>
+
+
+<script type="text/javascript">
+
+    var index = 1;
+
+    function plusIndex(n) {
+        index = index + n;
+        showImage(index);
+    }
+
+    showImage(1);
+
+    function showImage(n)
+    {
+        var i;
+        var x = document.getElementsByClassName("works_img");
+        if (n > x.length) { index = 1 };
+        if (n < 1) { index = x.length };
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[index - 1].style.display = "block";
+    }
+
+    autoSlide();
+    function autoSlide()
+    {
+        var i;
+        var x = document.getElementsByClassName("works_img");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        if (index > x.length) { index = 1 }
+        x[index - 1].style.display = "block";
+        index++;
+        setTimeout(autoSlide, 5000);
+    }
+</script>
