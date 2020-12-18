@@ -25,11 +25,11 @@ def worksPreview(id):
     except Exception as e:
 	    return str(e)
 
-@app.route("/works/<id>")
+@app.route("/works/<id>", methods=['GET'])
 def worksId(id):
     return render_template("works/" + id + ".html")
 
-@app.route("/assets/<id>")
+@app.route("/assets/<id>", methods=['GET'])
 def worksGlb(id):
     try:
 	    return send_file('/assets/'+id, attachment_filename=id)
