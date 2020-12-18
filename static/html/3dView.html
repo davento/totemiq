@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/3dView.css"/>
+        <script src="../js/3dView.js"></script>
+    </head>
+    <body>
+        <div class="allContent">
+        <div>some text</div>
+        <ul class="wrapper" id="demoView"></ul>
+        <div>some text</div>
+        </div>
+    <!--
+<script>
+	var index = 1;
+	function plusIndex(n){
+		index = index + n;
+		showImage(index);
+	}
+	showImage(1);
+	function showImage(n) {
+		var i;
+		var x = document.getElementsByClassName("slides");
+		if(n > x.length){index = 1};
+		if(n < 1){index = x.length};
+		for(i=0;i<x.length;i++)
+			{
+				x[i].style.display = "none";
+			}
+		x[index-1].style.display = "block";
+	}
+	autoSlide();
+	function autoSlide(){
+		var i;
+		var x = document.getElementsByClassName("slides");
+		for(i=0;i<x.length;i++)
+			{
+				x[i].style.display = "none";
+			}
+		if(index > x.length) {index = 1}
+		x[index-1].style.display = "block";
+		index++;
+		setTimeout(autoSlide,5000);
+	}
+	</script>
+<div id="slideshow-container">
+		<img class="slides fade" src="images/slide1.png"/>
+		<img class="slides fade" src="images/slide2.png"/>
+		<img class="slides fade" src="images/slide3.png"/>
+		<button class="btn" onclick="plusIndex(-1)" id="left">&#10094;</button>
+		<button class="btn" id="right" onclick="plusIndex(1)">&#10095;</button>
+</div>
+    -->
+    </body>
+</html>
